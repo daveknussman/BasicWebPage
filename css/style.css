@@ -1,3 +1,9 @@
+* {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
 body {
   background-color: rgb(233, 235, 238);
   margin: 0;
@@ -22,21 +28,50 @@ nav {
   font-size: 1.5em;
   width: 200px;
   padding: 20px;
-  background-color: blanchedalmond;
+  background-color: blue;
   border-radius: 20px;
-}
-
-.nav-container > a:hover {
-  background-color: bisque;
+  transition: background-color 1s;
 }
 
 .nav-link {
+  transition: background-color 3s, width 3s;
+  /* Color timing working but width timing not??? */
+  /* transition: 3s;
+  transition: width 5s; */
+  /* Look at css vendor prefixes */
+}
+
+.button1 {
+  height: 25px;
+  width: 300px;
+  transition: 500ms linear;
+}
+
+/* .button1:active {
+  background-color: powderblue;
+  transform: rotate(360deg);
+} */
+
+.button1:hover {
+  color: brown;
+  background-color: chartreuse;
+  transform: rotate(360deg);
+}
+
+.nav-container > a:hover {
+  background-color: yellow;
+  /* width: 250px; */
+}
+
+.nav-link:hover {
+  background-color:red;
+  width: 250px;
 }
 
 main {
   display: flex;
   margin: 5%;
-  background-color: antiquewhite;
+  background-color:limegreen;
 }
 
 main img {
@@ -50,6 +85,25 @@ main > article {
   padding: 20px;
 }
 
+main > article:hover {
+  background-color: peru;
+}
+
+main > article > p:hover {
+  background-color: lightblue;
+  border: 10px;
+  border-color: blue;
+  border-style: dotted;
+}
+
+h2:active {
+  filter: opacity(0);
+}
+
+/* h2:hover {
+  filter: opacity(0);
+} */
+
 footer {
   background-color: antiquewhite;
   overflow: auto;
@@ -62,5 +116,12 @@ footer i {
 }
 
 footer i:hover {
-  color: red;
+  color: purple;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  main {
+    background-color: purple;
+  }
 }
