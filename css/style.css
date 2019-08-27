@@ -27,6 +27,7 @@ body {
   margin: 3px 0 0 0;
   display: flex;
   justify-content: space-around;
+  /* justify-content: right; */
   background-color: gray;
 }
 
@@ -40,7 +41,8 @@ body {
   padding: 5px; /* this is how i changed the height of the link - padding is the space around the text which changed the height of the a*/
   background-color: blue;
   border-radius: 15px;
-  transition: background-color 1s;
+  /* border:none; */
+  transition: background-color 500ms;
 }
 .nav-container > a:hover {
   background-color: yellow;
